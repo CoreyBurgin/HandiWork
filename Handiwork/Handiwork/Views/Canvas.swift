@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  Canvas.swift
 //  Handiwork
 //
-//  Created by Corey Burgin on 9/8/20.
+//  Created by Corey Burgin on 9/10/20.
 //  Copyright © 2020 Corey Burgin. All rights reserved.
 //
 
@@ -18,10 +18,10 @@ class Canvas: UIView {
         
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
-//        
+//
 //        let startPoint = CGPoint(x: 0, y: 0)
 //        let endPoint = CGPoint(x: 100, y: 100)
-//        
+//
         
         
     
@@ -61,6 +61,7 @@ class Canvas: UIView {
         guard var lastLine = lines.popLast() else  { return }
         
         lastLine.append(point)
+
         lines.append(lastLine)
         
         setNeedsDisplay()
@@ -68,21 +69,3 @@ class Canvas: UIView {
     
     
 }
-
-class ViewController: UIViewController {
-    
-    let canvas = Canvas()
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.addSubview(canvas)
-        canvas.frame = view.frame
-        canvas.backgroundColor = .white
-        view.backgroundColor = .blue
-    }
-
-
-}
-
