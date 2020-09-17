@@ -9,6 +9,19 @@
 import UIKit
 
 
+extension UIColor {
+    
+    
+    static let blueMain = UIColor(red: 0.02, green: 0.20, blue: 0.33, alpha: 1.00)
+    
+    static let redMain = UIColor(red: 0.89, green: 0.27, blue: 0.32, alpha: 1.00)
+    
+    static let yellowMain = UIColor(red:0.98, green:0.60, blue:0.06, alpha:1.00)
+    
+    static let whitMain = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.00)
+    
+}
+
 
 extension UIView {
 
