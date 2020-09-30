@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     let canvas = Canvas()
     
+    
+    
     let undoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Undo", for: .normal)
@@ -53,7 +55,7 @@ class ViewController: UIViewController {
         let button = UIButton(type: .system)
         button.backgroundColor = .redMain
         button.layer.borderWidth = 1
-        button.layer.cornerRadius = 5
+        button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(handleColorChange), for: .touchUpInside)
         return button
     }()
@@ -77,8 +79,8 @@ class ViewController: UIViewController {
     
     let slider: UISlider = {
         let slider = UISlider()
-        slider.minimumValue = 1
-        slider.maximumValue = 10
+        slider.minimumValue = 3
+        slider.maximumValue = 13
         slider.thumbTintColor = UIColor.black
         slider.tintColor = UIColor.black
         slider.addTarget(self, action: #selector(handleSliderChange), for: .valueChanged)
